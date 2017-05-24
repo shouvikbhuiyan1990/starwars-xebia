@@ -1,0 +1,16 @@
+<div ng-controller="searchCtrl">
+    <div class="search-container">
+        <form>
+            <h3>Enter Planet Name<span class="badge">( If not logged in as <i>Luke</i>, Max 15 characters per minute can be typed )</span></h3>
+            <input ng-disabled="disableSearch" type="text" ng-model="planetName" placeholder="Enter Planet Name" class="form-control" ng-keyup="getSearchResults()"  />
+            <div ng-if="disableSearch" class="alert alert-danger">
+                You can't search more. You have to wait {{remainingTime}} seconds'
+            </div>
+        </form>
+        <ul>
+            <li ng-class="{'big':planet.population>5000}" ng-repeat="planet in planetResults | buha:planetName track by $index">
+                {{planet.name}}
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+.star-form-container,.search-container{
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    flex-direction: column;
+}
+.star-form-container form{
+    width: 35%;
+    background-color: #F7F7F7;
+    padding: 20px;
+    -webkit-box-shadow: -1px 3px 14px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 3px 14px 1px rgba(0,0,0,0.75);
+    box-shadow: -1px 3px 14px 1px rgba(0,0,0,0.75);
+}
+.star-form-container form button{
+    width: 100%;
+}
+
+.search-container form{
+    width: 70%;
+}
+.search-container ul{
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+}
+.search-container ul li{
+    list-style: none;
+    padding: 10px 5px 7px;
+    border: 1px solid #ccc;
+    margin: 10px;
+}
+.big{
+    background: #00f000;
+    color: #fff;
+    transform: SCALE(1.2);
+}
