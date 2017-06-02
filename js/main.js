@@ -83,9 +83,19 @@ app.service('configServices',['$http',function($http){
         return $http.get(url);
     };
     this.getPlanets = function(){
-        return $http.get('data/planetall.json');
+        return $http.get('http://swapi.co/api/planets/');
     }
 }]);
+
+app.directive('planetIndividual',[function(){
+    return {
+        restrict : 'E',
+        scope : {
+            planetName : "="
+        },
+        templateUrl : 'planetDetails.html'
+    }
+}])
 
 
 app.filter('buha',[function(){

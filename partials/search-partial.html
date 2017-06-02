@@ -8,9 +8,9 @@
             </div>
         </form>
         <ul>
-            <li ng-class="{'big':planet.population>5000}" ng-repeat="planet in planetResults | buha:planetName track by $index">
+            <planetIndividual ng-class="{'big':planet.population>5000}" ng-repeat="planet in planetResults | buha:planetName track by $index" planetName="planet">
                 {{planet.name}}
-            </li>
+            </planetIndividual>
         </ul>
     </div>
 </div>
